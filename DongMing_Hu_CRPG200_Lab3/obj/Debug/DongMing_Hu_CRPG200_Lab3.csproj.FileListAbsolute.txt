@@ -1,0 +1,12 @@
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\bin\Debug\DongMing_Hu_CRPG200_Lab3.exe.config
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\bin\Debug\DongMing_Hu_CRPG200_Lab3.exe
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\bin\Debug\DongMing_Hu_CRPG200_Lab3.pdb
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\obj\Debug\DongMing_Hu_CRPG200_Lab3.csprojAssemblyReference.cache
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\obj\Debug\DongMing_Hu_CRPG200_Lab3.frmNorthwind.resources
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\obj\Debug\DongMing_Hu_CRPG200_Lab3.Properties.Resources.resources
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\obj\Debug\DongMing_Hu_CRPG200_Lab3.csproj.GenerateResource.cache
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\obj\Debug\DongMing_Hu_CRPG200_Lab3.csproj.CoreCompileInputs.cache
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\obj\Debug\DongMing_Hu_CRPG200_Lab3.exe
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\obj\Debug\DongMing_Hu_CRPG200_Lab3.pdb
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\bin\Debug\NorthwindDataSet.Designer.cs
+C:\Users\hdmdh\source\repos\DongMing_Hu_CRPG200_Lab3\DongMing_Hu_CRPG200_Lab3\bin\Debug\NorthwindDataSet.xsc

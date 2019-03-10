@@ -16,7 +16,7 @@ namespace DongMing_Hu_CRPG200_Lab3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmNorthwind());
         }
     }
 }
