@@ -40,6 +40,8 @@
             System.Windows.Forms.Label reorderLevelLabel;
             System.Windows.Forms.Label discontinuedLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNorthwind));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.northwindDataSet = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSet();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -76,7 +78,6 @@
             this.order_DetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.order_DetailsDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,7 +104,7 @@
             // productIDLabel
             // 
             productIDLabel.AutoSize = true;
-            productIDLabel.Location = new System.Drawing.Point(200, 51);
+            productIDLabel.Location = new System.Drawing.Point(72, 37);
             productIDLabel.Name = "productIDLabel";
             productIDLabel.Size = new System.Drawing.Size(92, 21);
             productIDLabel.TabIndex = 1;
@@ -112,7 +113,7 @@
             // productNameLabel
             // 
             productNameLabel.AutoSize = true;
-            productNameLabel.Location = new System.Drawing.Point(172, 103);
+            productNameLabel.Location = new System.Drawing.Point(44, 89);
             productNameLabel.Name = "productNameLabel";
             productNameLabel.Size = new System.Drawing.Size(120, 21);
             productNameLabel.TabIndex = 3;
@@ -121,7 +122,7 @@
             // supplierIDLabel
             // 
             supplierIDLabel.AutoSize = true;
-            supplierIDLabel.Location = new System.Drawing.Point(196, 155);
+            supplierIDLabel.Location = new System.Drawing.Point(68, 141);
             supplierIDLabel.Name = "supplierIDLabel";
             supplierIDLabel.Size = new System.Drawing.Size(96, 21);
             supplierIDLabel.TabIndex = 5;
@@ -130,7 +131,7 @@
             // categoryIDLabel
             // 
             categoryIDLabel.AutoSize = true;
-            categoryIDLabel.Location = new System.Drawing.Point(189, 207);
+            categoryIDLabel.Location = new System.Drawing.Point(61, 193);
             categoryIDLabel.Name = "categoryIDLabel";
             categoryIDLabel.Size = new System.Drawing.Size(103, 21);
             categoryIDLabel.TabIndex = 7;
@@ -139,7 +140,7 @@
             // quantityPerUnitLabel
             // 
             quantityPerUnitLabel.AutoSize = true;
-            quantityPerUnitLabel.Location = new System.Drawing.Point(153, 259);
+            quantityPerUnitLabel.Location = new System.Drawing.Point(25, 245);
             quantityPerUnitLabel.Name = "quantityPerUnitLabel";
             quantityPerUnitLabel.Size = new System.Drawing.Size(139, 21);
             quantityPerUnitLabel.TabIndex = 9;
@@ -148,7 +149,7 @@
             // unitPriceLabel
             // 
             unitPriceLabel.AutoSize = true;
-            unitPriceLabel.Location = new System.Drawing.Point(208, 311);
+            unitPriceLabel.Location = new System.Drawing.Point(80, 297);
             unitPriceLabel.Name = "unitPriceLabel";
             unitPriceLabel.Size = new System.Drawing.Size(84, 21);
             unitPriceLabel.TabIndex = 11;
@@ -157,7 +158,7 @@
             // unitsInStockLabel
             // 
             unitsInStockLabel.AutoSize = true;
-            unitsInStockLabel.Location = new System.Drawing.Point(179, 363);
+            unitsInStockLabel.Location = new System.Drawing.Point(51, 349);
             unitsInStockLabel.Name = "unitsInStockLabel";
             unitsInStockLabel.Size = new System.Drawing.Size(113, 21);
             unitsInStockLabel.TabIndex = 13;
@@ -166,7 +167,7 @@
             // unitsOnOrderLabel
             // 
             unitsOnOrderLabel.AutoSize = true;
-            unitsOnOrderLabel.Location = new System.Drawing.Point(166, 415);
+            unitsOnOrderLabel.Location = new System.Drawing.Point(38, 401);
             unitsOnOrderLabel.Name = "unitsOnOrderLabel";
             unitsOnOrderLabel.Size = new System.Drawing.Size(126, 21);
             unitsOnOrderLabel.TabIndex = 15;
@@ -175,7 +176,7 @@
             // reorderLevelLabel
             // 
             reorderLevelLabel.AutoSize = true;
-            reorderLevelLabel.Location = new System.Drawing.Point(175, 467);
+            reorderLevelLabel.Location = new System.Drawing.Point(47, 453);
             reorderLevelLabel.Name = "reorderLevelLabel";
             reorderLevelLabel.Size = new System.Drawing.Size(117, 21);
             reorderLevelLabel.TabIndex = 17;
@@ -184,7 +185,7 @@
             // discontinuedLabel
             // 
             discontinuedLabel.AutoSize = true;
-            discontinuedLabel.Location = new System.Drawing.Point(182, 519);
+            discontinuedLabel.Location = new System.Drawing.Point(54, 505);
             discontinuedLabel.Name = "discontinuedLabel";
             discontinuedLabel.Size = new System.Drawing.Size(110, 21);
             discontinuedLabel.TabIndex = 19;
@@ -251,7 +252,7 @@
             this.productsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productsBindingNavigator.Name = "productsBindingNavigator";
             this.productsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productsBindingNavigator.Size = new System.Drawing.Size(956, 25);
+            this.productsBindingNavigator.Size = new System.Drawing.Size(924, 25);
             this.productsBindingNavigator.TabIndex = 0;
             this.productsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -267,7 +268,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(39, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -352,30 +353,32 @@
             // productIDTextBox
             // 
             this.productIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "ProductID", true));
-            this.productIDTextBox.Location = new System.Drawing.Point(328, 47);
+            this.productIDTextBox.Enabled = false;
+            this.productIDTextBox.Location = new System.Drawing.Point(200, 33);
             this.productIDTextBox.Name = "productIDTextBox";
-            this.productIDTextBox.Size = new System.Drawing.Size(158, 28);
+            this.productIDTextBox.Size = new System.Drawing.Size(223, 28);
             this.productIDTextBox.TabIndex = 2;
+            this.productIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // productNameTextBox
             // 
             this.productNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "ProductName", true));
-            this.productNameTextBox.Location = new System.Drawing.Point(328, 99);
+            this.productNameTextBox.Location = new System.Drawing.Point(200, 85);
             this.productNameTextBox.Name = "productNameTextBox";
-            this.productNameTextBox.Size = new System.Drawing.Size(158, 28);
+            this.productNameTextBox.Size = new System.Drawing.Size(223, 28);
             this.productNameTextBox.TabIndex = 4;
             // 
             // supplierIDComboBox
             // 
-            this.supplierIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.suppliersBindingSource, "SupplierID", true));
+            this.supplierIDComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productsBindingSource, "SupplierID", true));
             this.supplierIDComboBox.DataSource = this.suppliersBindingSource;
             this.supplierIDComboBox.DisplayMember = "CompanyName";
             this.supplierIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.supplierIDComboBox.DropDownWidth = 450;
             this.supplierIDComboBox.FormattingEnabled = true;
-            this.supplierIDComboBox.Location = new System.Drawing.Point(328, 151);
+            this.supplierIDComboBox.Location = new System.Drawing.Point(200, 137);
             this.supplierIDComboBox.Name = "supplierIDComboBox";
-            this.supplierIDComboBox.Size = new System.Drawing.Size(158, 29);
+            this.supplierIDComboBox.Size = new System.Drawing.Size(223, 29);
             this.supplierIDComboBox.TabIndex = 6;
             this.supplierIDComboBox.ValueMember = "SupplierID";
             // 
@@ -392,9 +395,9 @@
             this.categoryIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.categoryIDComboBox.DropDownWidth = 400;
             this.categoryIDComboBox.FormattingEnabled = true;
-            this.categoryIDComboBox.Location = new System.Drawing.Point(328, 204);
+            this.categoryIDComboBox.Location = new System.Drawing.Point(200, 190);
             this.categoryIDComboBox.Name = "categoryIDComboBox";
-            this.categoryIDComboBox.Size = new System.Drawing.Size(158, 29);
+            this.categoryIDComboBox.Size = new System.Drawing.Size(223, 29);
             this.categoryIDComboBox.TabIndex = 8;
             this.categoryIDComboBox.ValueMember = "CategoryID";
             // 
@@ -406,47 +409,47 @@
             // quantityPerUnitTextBox
             // 
             this.quantityPerUnitTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "QuantityPerUnit", true));
-            this.quantityPerUnitTextBox.Location = new System.Drawing.Point(328, 257);
+            this.quantityPerUnitTextBox.Location = new System.Drawing.Point(200, 243);
             this.quantityPerUnitTextBox.Name = "quantityPerUnitTextBox";
-            this.quantityPerUnitTextBox.Size = new System.Drawing.Size(158, 28);
+            this.quantityPerUnitTextBox.Size = new System.Drawing.Size(223, 28);
             this.quantityPerUnitTextBox.TabIndex = 10;
             // 
             // unitPriceTextBox
             // 
             this.unitPriceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "UnitPrice", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "C2"));
-            this.unitPriceTextBox.Location = new System.Drawing.Point(328, 309);
+            this.unitPriceTextBox.Location = new System.Drawing.Point(200, 295);
             this.unitPriceTextBox.Name = "unitPriceTextBox";
-            this.unitPriceTextBox.Size = new System.Drawing.Size(158, 28);
+            this.unitPriceTextBox.Size = new System.Drawing.Size(223, 28);
             this.unitPriceTextBox.TabIndex = 12;
             // 
             // unitsInStockTextBox
             // 
             this.unitsInStockTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "UnitsInStock", true));
-            this.unitsInStockTextBox.Location = new System.Drawing.Point(328, 361);
+            this.unitsInStockTextBox.Location = new System.Drawing.Point(200, 347);
             this.unitsInStockTextBox.Name = "unitsInStockTextBox";
-            this.unitsInStockTextBox.Size = new System.Drawing.Size(158, 28);
+            this.unitsInStockTextBox.Size = new System.Drawing.Size(223, 28);
             this.unitsInStockTextBox.TabIndex = 14;
             // 
             // unitsOnOrderTextBox
             // 
             this.unitsOnOrderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "UnitsOnOrder", true));
-            this.unitsOnOrderTextBox.Location = new System.Drawing.Point(328, 413);
+            this.unitsOnOrderTextBox.Location = new System.Drawing.Point(200, 399);
             this.unitsOnOrderTextBox.Name = "unitsOnOrderTextBox";
-            this.unitsOnOrderTextBox.Size = new System.Drawing.Size(158, 28);
+            this.unitsOnOrderTextBox.Size = new System.Drawing.Size(223, 28);
             this.unitsOnOrderTextBox.TabIndex = 16;
             // 
             // reorderLevelTextBox
             // 
             this.reorderLevelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "ReorderLevel", true));
-            this.reorderLevelTextBox.Location = new System.Drawing.Point(328, 465);
+            this.reorderLevelTextBox.Location = new System.Drawing.Point(200, 451);
             this.reorderLevelTextBox.Name = "reorderLevelTextBox";
-            this.reorderLevelTextBox.Size = new System.Drawing.Size(158, 28);
+            this.reorderLevelTextBox.Size = new System.Drawing.Size(223, 28);
             this.reorderLevelTextBox.TabIndex = 18;
             // 
             // discontinuedCheckBox
             // 
             this.discontinuedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.productsBindingSource, "Discontinued", true));
-            this.discontinuedCheckBox.Location = new System.Drawing.Point(328, 517);
+            this.discontinuedCheckBox.Location = new System.Drawing.Point(200, 503);
             this.discontinuedCheckBox.Name = "discontinuedCheckBox";
             this.discontinuedCheckBox.Size = new System.Drawing.Size(158, 24);
             this.discontinuedCheckBox.TabIndex = 20;
@@ -459,19 +462,22 @@
             // 
             // order_DetailsDataGridView
             // 
+            this.order_DetailsDataGridView.AllowUserToAddRows = false;
+            this.order_DetailsDataGridView.AllowUserToDeleteRows = false;
             this.order_DetailsDataGridView.AutoGenerateColumns = false;
+            this.order_DetailsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.order_DetailsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.order_DetailsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.order_DetailsDataGridView.DataSource = this.order_DetailsBindingSource;
-            this.order_DetailsDataGridView.Location = new System.Drawing.Point(55, 561);
+            this.order_DetailsDataGridView.Location = new System.Drawing.Point(451, 33);
             this.order_DetailsDataGridView.Name = "order_DetailsDataGridView";
             this.order_DetailsDataGridView.ReadOnly = true;
-            this.order_DetailsDataGridView.Size = new System.Drawing.Size(568, 73);
+            this.order_DetailsDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.order_DetailsDataGridView.Size = new System.Drawing.Size(421, 446);
             this.order_DetailsDataGridView.TabIndex = 21;
             // 
             // dataGridViewTextBoxColumn1
@@ -481,19 +487,13 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ProductID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ProductID";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "UnitPrice";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn3.HeaderText = "UnitPrice";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -501,6 +501,8 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Quantity";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -508,6 +510,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Discount";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn5.HeaderText = "Discount";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -516,7 +520,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 937);
+            this.ClientSize = new System.Drawing.Size(924, 537);
             this.Controls.Add(this.order_DetailsDataGridView);
             this.Controls.Add(productIDLabel);
             this.Controls.Add(this.productIDTextBox);
@@ -595,7 +599,6 @@
         private System.Windows.Forms.BindingSource order_DetailsBindingSource;
         private System.Windows.Forms.DataGridView order_DetailsDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;

@@ -42,7 +42,7 @@ namespace DongMing_Hu_CRPG200_Lab3
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Database error # " + ex.Number + ": " + ex.Message, ex.GetType().ToString());
+                MessageBox.Show("Database load error # " + ex.Number + ": " + ex.Message, ex.GetType().ToString());
             }
             catch (Exception ex)
             {
