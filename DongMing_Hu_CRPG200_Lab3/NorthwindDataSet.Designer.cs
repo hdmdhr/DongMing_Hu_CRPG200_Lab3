@@ -983,15 +983,16 @@ namespace DongMing_Hu_CRPG200_Lab3 {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnProductID}, true));
                 this.columnProductID.AutoIncrement = true;
-                this.columnProductID.AutoIncrementSeed = -1;
-                this.columnProductID.AutoIncrementStep = -1;
+                this.columnProductID.AutoIncrementSeed = 1;
                 this.columnProductID.AllowDBNull = false;
                 this.columnProductID.ReadOnly = true;
                 this.columnProductID.Unique = true;
                 this.columnProductName.AllowDBNull = false;
+                this.columnProductName.DefaultValue = ((string)("new product"));
                 this.columnProductName.MaxLength = 40;
                 this.columnQuantityPerUnit.MaxLength = 20;
                 this.columnDiscontinued.AllowDBNull = false;
+                this.columnDiscontinued.DefaultValue = ((bool)(false));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -52,6 +52,9 @@
     <Compile Include="frmNorthwind.Designer.cs">
       <DependentUpon>frmNorthwind.cs</DependentUpon>
     </Compile>
+    <Compile Include="NorthwindDataSet.cs">
+      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NorthwindDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

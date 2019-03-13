@@ -40,18 +40,13 @@
             System.Windows.Forms.Label reorderLevelLabel;
             System.Windows.Forms.Label discontinuedLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNorthwind));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.northwindDataSet = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSet();
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsTableAdapter = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.ProductsTableAdapter();
-            this.tableAdapterManager = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.TableAdapterManager();
-            this.categoriesTableAdapter = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.CategoriesTableAdapter();
-            this.order_DetailsTableAdapter = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.Order_DetailsTableAdapter();
-            this.suppliersTableAdapter = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.SuppliersTableAdapter();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.productsBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.northwindDataSet = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -81,6 +76,11 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productsTableAdapter = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.ProductsTableAdapter();
+            this.tableAdapterManager = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.TableAdapterManager();
+            this.categoriesTableAdapter = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.CategoriesTableAdapter();
+            this.order_DetailsTableAdapter = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.Order_DetailsTableAdapter();
+            this.suppliersTableAdapter = new DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.SuppliersTableAdapter();
             productIDLabel = new System.Windows.Forms.Label();
             productNameLabel = new System.Windows.Forms.Label();
             supplierIDLabel = new System.Windows.Forms.Label();
@@ -91,10 +91,10 @@
             unitsOnOrderLabel = new System.Windows.Forms.Label();
             reorderLevelLabel = new System.Windows.Forms.Label();
             discontinuedLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingNavigator)).BeginInit();
             this.productsBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_DetailsBindingSource)).BeginInit();
@@ -122,20 +122,20 @@
             // supplierIDLabel
             // 
             supplierIDLabel.AutoSize = true;
-            supplierIDLabel.Location = new System.Drawing.Point(68, 141);
+            supplierIDLabel.Location = new System.Drawing.Point(89, 141);
             supplierIDLabel.Name = "supplierIDLabel";
-            supplierIDLabel.Size = new System.Drawing.Size(96, 21);
+            supplierIDLabel.Size = new System.Drawing.Size(75, 21);
             supplierIDLabel.TabIndex = 5;
-            supplierIDLabel.Text = "Supplier ID:";
+            supplierIDLabel.Text = "Supplier:";
             // 
             // categoryIDLabel
             // 
             categoryIDLabel.AutoSize = true;
-            categoryIDLabel.Location = new System.Drawing.Point(61, 193);
+            categoryIDLabel.Location = new System.Drawing.Point(82, 193);
             categoryIDLabel.Name = "categoryIDLabel";
-            categoryIDLabel.Size = new System.Drawing.Size(103, 21);
+            categoryIDLabel.Size = new System.Drawing.Size(82, 21);
             categoryIDLabel.TabIndex = 7;
-            categoryIDLabel.Text = "Category ID:";
+            categoryIDLabel.Text = "Category:";
             // 
             // quantityPerUnitLabel
             // 
@@ -191,41 +191,6 @@
             discontinuedLabel.TabIndex = 19;
             discontinuedLabel.Text = "Discontinued:";
             // 
-            // northwindDataSet
-            // 
-            this.northwindDataSet.DataSetName = "NorthwindDataSet";
-            this.northwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "Products";
-            this.productsBindingSource.DataSource = this.northwindDataSet;
-            // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriesTableAdapter = this.categoriesTableAdapter;
-            this.tableAdapterManager.Order_DetailsTableAdapter = this.order_DetailsTableAdapter;
-            this.tableAdapterManager.ProductsTableAdapter = this.productsTableAdapter;
-            this.tableAdapterManager.SuppliersTableAdapter = this.suppliersTableAdapter;
-            this.tableAdapterManager.UpdateOrder = DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // categoriesTableAdapter
-            // 
-            this.categoriesTableAdapter.ClearBeforeFill = true;
-            // 
-            // order_DetailsTableAdapter
-            // 
-            this.order_DetailsTableAdapter.ClearBeforeFill = true;
-            // 
-            // suppliersTableAdapter
-            // 
-            this.suppliersTableAdapter.ClearBeforeFill = true;
-            // 
             // productsBindingNavigator
             // 
             this.productsBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -252,7 +217,7 @@
             this.productsBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.productsBindingNavigator.Name = "productsBindingNavigator";
             this.productsBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productsBindingNavigator.Size = new System.Drawing.Size(924, 25);
+            this.productsBindingNavigator.Size = new System.Drawing.Size(919, 25);
             this.productsBindingNavigator.TabIndex = 0;
             this.productsBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -264,6 +229,17 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "Products";
+            this.productsBindingSource.DataSource = this.northwindDataSet;
+            this.productsBindingSource.DataError += new System.Windows.Forms.BindingManagerDataErrorEventHandler(this.productsBindingSource_DataError);
+            // 
+            // northwindDataSet
+            // 
+            this.northwindDataSet.DataSetName = "NorthwindDataSet";
+            this.northwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -354,19 +330,22 @@
             // 
             this.productIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "ProductID", true));
             this.productIDTextBox.Enabled = false;
+            this.productIDTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productIDTextBox.Location = new System.Drawing.Point(200, 33);
             this.productIDTextBox.Name = "productIDTextBox";
             this.productIDTextBox.Size = new System.Drawing.Size(223, 28);
             this.productIDTextBox.TabIndex = 2;
-            this.productIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.productIDTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // productNameTextBox
             // 
             this.productNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "ProductName", true));
+            this.productNameTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productNameTextBox.Location = new System.Drawing.Point(200, 85);
             this.productNameTextBox.Name = "productNameTextBox";
             this.productNameTextBox.Size = new System.Drawing.Size(223, 28);
             this.productNameTextBox.TabIndex = 4;
+            this.productNameTextBox.TextChanged += new System.EventHandler(this.productNameTextBox_TextChanged);
             // 
             // supplierIDComboBox
             // 
@@ -424,11 +403,12 @@
             // 
             // unitsInStockTextBox
             // 
-            this.unitsInStockTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "UnitsInStock", true));
+            this.unitsInStockTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productsBindingSource, "UnitsInStock", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.unitsInStockTextBox.Location = new System.Drawing.Point(200, 347);
             this.unitsInStockTextBox.Name = "unitsInStockTextBox";
             this.unitsInStockTextBox.Size = new System.Drawing.Size(223, 28);
             this.unitsInStockTextBox.TabIndex = 14;
+            this.unitsInStockTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.unitsInStockTextBox_Validating);
             // 
             // unitsOnOrderTextBox
             // 
@@ -490,10 +470,10 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "UnitPrice";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn3.HeaderText = "UnitPrice";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -501,8 +481,8 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Quantity";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -510,17 +490,43 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Discount";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn5.HeaderText = "Discount";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // productsTableAdapter
+            // 
+            this.productsTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CategoriesTableAdapter = this.categoriesTableAdapter;
+            this.tableAdapterManager.Order_DetailsTableAdapter = this.order_DetailsTableAdapter;
+            this.tableAdapterManager.ProductsTableAdapter = this.productsTableAdapter;
+            this.tableAdapterManager.SuppliersTableAdapter = this.suppliersTableAdapter;
+            this.tableAdapterManager.UpdateOrder = DongMing_Hu_CRPG200_Lab3.NorthwindDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // categoriesTableAdapter
+            // 
+            this.categoriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // order_DetailsTableAdapter
+            // 
+            this.order_DetailsTableAdapter.ClearBeforeFill = true;
+            // 
+            // suppliersTableAdapter
+            // 
+            this.suppliersTableAdapter.ClearBeforeFill = true;
             // 
             // frmNorthwind
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 537);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClientSize = new System.Drawing.Size(919, 537);
             this.Controls.Add(this.order_DetailsDataGridView);
             this.Controls.Add(productIDLabel);
             this.Controls.Add(this.productIDTextBox);
@@ -548,11 +554,11 @@
             this.Name = "frmNorthwind";
             this.Text = "Northwind Products";
             this.Load += new System.EventHandler(this.frmNorthwind_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingNavigator)).EndInit();
             this.productsBindingNavigator.ResumeLayout(false);
             this.productsBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.northwindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_DetailsBindingSource)).EndInit();
